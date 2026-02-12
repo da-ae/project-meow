@@ -13,8 +13,9 @@ MUI 커스텀 테마 설정 규칙
 - **Pretendard Variable** 버전을 웹폰트로 사용
 
 ### Headline
-- **영어**: Google Font의 **Outfit**
-- **한글**: Pretendard의 가장 높은 weight
+- **1순위**: 로컬 폰트 **Bohyun** (`src/assets/bohyun.ttf`, @font-face로 등록)
+- **2순위 (fallback)**: Google Font의 **Outfit**
+- **3순위 (한글 fallback)**: Pretendard의 가장 높은 weight
 
 ## Color
 
@@ -72,7 +73,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Pretendard Variable, sans-serif',
     h1: {
-      fontFamily: 'Outfit, Pretendard Variable, sans-serif',
+      fontFamily: 'Bohyun, Outfit, Pretendard Variable, sans-serif',
       fontWeight: 900,
     },
     // ...

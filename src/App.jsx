@@ -1,28 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 
 import { defaultTheme as theme } from './styles/themes';
 
+import Hero from './components/chapters/Hero';
+import ChapterInfo from './components/chapters/ChapterInfo';
+import Chapter1Scene02 from './components/chapters/Chapter1Scene02';
+import Chapter1Scene03 from './components/chapters/Chapter1Scene03';
+
 function HomePage() {
   return (
-    <Box
-      sx={{
-        p: 4,
-        textAlign: 'center',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      }}
-    >
-      <Typography variant="h3" gutterBottom>
-        Starter Kit
-      </Typography>
-      <Typography color="text.secondary">Your design system foundation</Typography>
-    </Box>
+    <>
+      <Hero />
+      <ChapterInfo
+        subtitle="CHAPTER 1"
+        title="처음 만나는 고양이"
+        description={ '이혼 후 새로운 곳으로 이사를 간 미정은\n한참 이삿짐 정리 중이다.' }
+      />
+      <Chapter1Scene02 />
+      <Chapter1Scene03 />
+    </>
   );
 }
 
